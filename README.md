@@ -1,15 +1,16 @@
-# Employee Attrition Analysis using Machine Learning
+# Employee Attrition Analysis using Machine Learning for Salifort Motors
 
 ## Project Overview
-This project aims to understand the factors leading to employee attrition in a company and to provide actionable insights to retain employees. By analyzing a dataset of employee records, we built predictive models to identify key factors influencing attrition and recommend strategies to improve employee retention.
+This project aims to understand the factors leading to employee attrition in Salifort Motors and to provide actionable insights to retain employees. By analyzing a dataset of employee records, we built predictive models to identify key factors influencing attrition and recommend strategies to improve employee retention.
 
 ## Business Understanding
 The primary stakeholders are the Human Resources department and company management. The business problem addressed is the high rate of employee attrition, which incurs significant costs in terms of recruitment, training, and lost productivity. Understanding the factors that lead to attrition allows the company to implement targeted strategies to retain valuable employees.
 
-## Data Understanding
+## Data Exploration
 The dataset includes 11,991 entries of employee data with various attributes such as employee satisfaction, evaluation scores, number of projects, average monthly hours, years at the company, and other demographic information. The data covers a timeframe of several years, providing a comprehensive view of employee behavior and outcomes. Key visualizations, such as histograms and correlation matrices, were used to explore the data and identify initial patterns.
 
-![alt text](images\class_balance.png)
+![alt text](images/class_balance.png)
+
 
   Despite the imbalanced classes, Random Forest was chosen because it is an ensemble method that tends to be more robust to imbalances than simpler algorithms. The model's ability to handle a large number of features and to implicitly perform feature selection makes it suitable for this type of analysis.
 
@@ -21,8 +22,8 @@ Several models were used to predict employee attrition, including:
 
 ### **Random Forest Champion Model:**
   
-This Random Forest model is designed to classify if an employee will leave the company. Key parameters:
-
+This Random Forest model is designed to classify if an employee will leave the company. 
+Best parameters:
 - **max_depth: 5** – Limits tree depth to prevent overfitting.
 - **max_features: 1.0** – Uses all features for splits.
 - **max_samples: 0.7** – Trains on 70% of data for robustness.
@@ -32,7 +33,7 @@ This Random Forest model is designed to classify if an employee will leave the c
 
 This setup balances complexity and generalization for effective attrition prediction.
 
-### Model Performance Scores
+### **Model Evaluation Metrics**
 
 | Metric     | Score    |
 |------------|----------|
@@ -42,13 +43,19 @@ This setup balances complexity and generalization for effective attrition predic
 | Accuracy   | 0.961641 |
 | AUC        | 0.938407 |
 
-  ![alt text](images\champion_rf_cm.png)
-The model predicts more false positives than false negatives, indicating that some employees may be incorrectly identified as at risk of quitting or being fired. Despite that it remains strong. 
+  ![alt text](images/champion_rf_cm.png)
+  
+The model predicts more false positives than false negatives, indicating that some employees may be incorrectly identified as at risk of quitting or being fired. Despite that it shows robust performance in validation and test data. 
 
-  ![alt text](images\champion_rf_feature_importance.png)
-The models highlighted that factors such as overwork, evaluation scores, and years at the company are significant predictors of attrition.
 
-## Conclusion
+### **Feature Importance**
+
+  ![alt text](images/champion_rf_feature_importance.png)
+  
+The model highlighted that factors such as overwork, evaluation scores, and years at the company are significant predictors of attrition.
+
+## Conclusion and Recommendations
+
 The analysis provided several key insights into the reasons for employee attrition and led to the following recommendations for stakeholders:
 
 - Limit the number of projects assigned to each employee.
@@ -58,5 +65,5 @@ The analysis provided several key insights into the reasons for employee attriti
 - Conduct discussions to understand and improve the work culture.
 - Implement a proportional reward system based on effort and contribution rather than excessive working hours.
 
-Future steps include expanding the analysis to include more diverse datasets, refining the models, and exploring additional factors that may influence employee satisfaction and retention.
+Next steps include expanding the analysis to include more diverse datasets, refining the models, and exploring additional factors that may influence employee satisfaction and retention.
 

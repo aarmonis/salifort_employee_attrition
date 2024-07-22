@@ -18,7 +18,7 @@ The dataset includes 11,991 entries of employee data with various attributes suc
 Several models were used to predict employee attrition, including:
 - Logistic Regression
 - Tree Models
-- **Random Forest Models**: Outperformed log regression the decision tree model in terms of accuracy and other metrics.
+- **Random Forest Models**: Champion Model based on Model Evaluation Metrics
 
 ### **Random Forest Champion Model:**
   
@@ -52,7 +52,7 @@ The model predicts more false positives than false negatives, indicating that so
 
   ![alt text](images/champion_rf_feature_importance.png)
   
-The model highlighted that factors such as overwork, evaluation scores, and years at the company are significant predictors of attrition.
+The model highlighted that factors such as overwork, evaluation scores, and tenure are significant predictors of attrition.
 
 ## Conclusion and Recommendations
 
